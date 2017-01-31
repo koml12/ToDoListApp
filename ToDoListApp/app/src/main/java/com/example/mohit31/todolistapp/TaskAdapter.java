@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -16,14 +17,24 @@ import java.util.ArrayList;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mTaskNameTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             mTaskNameTextView = (TextView) itemView.findViewById(R.id.task_name);
-            Log.d("RECYLER", "viewHolder created.");
+            Log.d("RECYCLER", "viewHolder created.");
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    mTaskList.remove(position);
+                    notifyItemRemoved(position);
+                }
+            });
         }
+
     }
 
     private ArrayList<String> mTaskList;
@@ -33,6 +44,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public TaskAdapter(Context context, ArrayList<String> tasks) {
         mTaskList = tasks;
         mContext = context;
+
         Log.d("RECYCLER", "New adapter created.");
     }
 

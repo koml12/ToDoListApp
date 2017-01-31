@@ -33,7 +33,9 @@ public class AddTaskActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String newTask = mAddTask.getText().toString();
-                tasks.add(newTask);
+                if (newTask != null && !newTask.equals("")){
+                    tasks.add(newTask);
+                }
                 Intent intent = new Intent(AddTaskActivity.this, MainActivity.class);
                 intent.putStringArrayListExtra("EXTRA", tasks);
                 startActivity(intent);
