@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/app_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:elevation="4dp"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -10,8 +27,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mohit31.todolist.MainActivity">
 
+
+
     <EditText
         android:id="@+id/add_item"
+        android:layout_below="@id/app_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/text_here"/>
@@ -32,6 +52,18 @@
         android:layout_height="wrap_content"
 
         />
-
+    <android.support.design.widget.FloatingActionButton
+        app:fabSize="auto"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingActionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:theme="@style/Widget.Design.FloatingActionButton"
+        android:layout_below="@id/rv_list"/>
 
 </RelativeLayout>
+
+
+</LinearLayout>

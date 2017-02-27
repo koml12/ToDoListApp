@@ -9,14 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class TodoListDbHelper extends SQLiteOpenHelper {
-    private static final String CREATE_TABLE = "CREATE TABLE "+
+    public static final String CREATE_TABLE = "CREATE TABLE "+
             TodoListContract.TodoListEntry.TABLE_NAME + " (" +
             TodoListContract.TodoListEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             TodoListContract.TodoListEntry.COLUMN_TASK_NAME+ " TEXT, "
             + TodoListContract.TodoListEntry.COLUMN_PRIORITY + " INTEGER, "
             + TodoListContract.TodoListEntry.COLUMN_DUE_DATE + " DATE)";
 
-    private static final String DELETE_TABLE = "DROP TABLE " + TodoListContract.TodoListEntry.TABLE_NAME;
+    public static final String DELETE_TABLE = "DROP TABLE " + TodoListContract.TodoListEntry.TABLE_NAME;
 
     public static final String DATABASE_NAME = "Tasks.db";
     public static final int DATABASE_VERSION = 1;
