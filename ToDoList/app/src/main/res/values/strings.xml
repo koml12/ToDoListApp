@@ -5,4 +5,7 @@
     <string name="add_task">Add</string>
     <string name="text_here">Text here</string>
     <string name="default_text_view">Default text view</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
 </resources>

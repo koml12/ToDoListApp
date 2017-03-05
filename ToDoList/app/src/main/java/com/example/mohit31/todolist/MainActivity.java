@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
         setSupportActionBar(mToolbar);
 
-        mAddTaskEditText = (EditText) findViewById(R.id.add_item);
 
-        mAddTaskButton = (Button) findViewById(R.id.button_add_item);
 
         fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
@@ -58,13 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
         itemsRecyclerView.setAdapter(mAdapter);
 
-         mAddTaskButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addToList(view);
-                Log.d("DATA", "onClick called");
-            }
-        });
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Cursor getAllItems() {
-        String[] selection = {TodoListContract.TodoListEntry.COLUMN_TASK_NAME};
+        String[] selection = {TodoListContract.TodoListEntry.COLUMN_TASK_NAME, TodoListContract.TodoListEntry.COLUMN_PRIORITY};
         return mDatabase.query(TodoListContract.TodoListEntry.TABLE_NAME,
                 selection,
                 null,
@@ -113,21 +104,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public long addTask(String taskName) {
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(TodoListContract.TodoListEntry.COLUMN_TASK_NAME, taskName);
-        return mDatabase.insert(TodoListContract.TodoListEntry.TABLE_NAME, null, contentValues);
-    }
 
-    public void addToList(View view) {
-        if (mAddTaskEditText.getText().length() == 0) {
-            return;
-        }
 
-        addTask(mAddTaskEditText.getText().toString());
-        mAdapter.swapCursor(getAllItems());
-
-        mAddTaskEditText.setText("");
-        mAddTaskEditText.clearFocus();
-    }
 }
