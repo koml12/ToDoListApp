@@ -14,7 +14,9 @@ public class TodoListDbHelper extends SQLiteOpenHelper {
             TodoListContract.TodoListEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             TodoListContract.TodoListEntry.COLUMN_TASK_NAME+ " TEXT, "
             + TodoListContract.TodoListEntry.COLUMN_PRIORITY + " INTEGER, "
-            + TodoListContract.TodoListEntry.COLUMN_DUE_DATE + " DATE)";
+            + TodoListContract.TodoListEntry.COLUMN_ITEM_NUMBER + " INTEGER, "
+            + TodoListContract.TodoListEntry.COLUMN_DUE_TIME + " TEXT, "
+            + TodoListContract.TodoListEntry.COLUMN_DUE_DATE + " TEXT)";
 
     public static final String DELETE_TABLE = "DROP TABLE " + TodoListContract.TodoListEntry.TABLE_NAME;
 

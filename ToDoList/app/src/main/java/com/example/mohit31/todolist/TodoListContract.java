@@ -16,5 +16,7 @@ public final class TodoListContract {
         public static final String COLUMN_TASK_NAME = "taskName";
         public static final String COLUMN_PRIORITY = "priority";
         public static final String COLUMN_DUE_DATE = "dueDate";
+        public static final String COLUMN_ITEM_NUMBER  = "itemNumber";
+        public static final String COLUMN_DUE_TIME = "dueTime";
     }
 }

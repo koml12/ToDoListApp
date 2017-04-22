@@ -8,4 +8,12 @@
     <string name="low">Low</string>
     <string name="medium">Medium</string>
     <string name="high">High</string>
+    <string name="empty_task_tv">No task linked yet.</string>
+    <string name="done">Done</string>
+    <string-array name="priority_list">
+        <item>Priority</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 </resources>
