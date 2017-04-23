@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.support.v7.widget.CardView;
+import com.example.mohit31.todolist.Activities.EditTaskActivity;
+import com.example.mohit31.todolist.R;
+import com.example.mohit31.todolist.Database.TodoListContract;
 
 /**
  * Created by mohit31 on 2/24/17.
@@ -49,7 +52,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
                 public void onClick(View view) {
                     // This next line is f***ing lit, I didn't even know why I'd need to pass context into the
                     // constructor until now.
-                    Intent goToTaskViewActivity = new Intent(mContext, ViewTaskActivity.class);
+                    Intent goToTaskViewActivity = new Intent(mContext, EditTaskActivity.class);
 
                     // Get task name and priority from the the TextViews.
                     String taskName = mListItemTextView.getText().toString();

@@ -1,8 +1,9 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import com.example.mohit31.todolist.Database.TodoListContract;
 
 /**
  * Created by mohit31 on 2/24/17.

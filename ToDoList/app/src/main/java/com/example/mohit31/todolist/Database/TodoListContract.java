@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Database;
 
 import android.provider.BaseColumns;
 

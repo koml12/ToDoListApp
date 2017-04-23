@@ -12,9 +12,9 @@
     android:layout_height="?attr/actionBarSize"
     android:elevation="4dp"
     android:background="@color/colorPrimary"
-    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    android:theme="@style/AppTheme"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,7 +25,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mohit31.todolist.MainActivity">
+    tools:context="com.example.mohit31.todolist.Activities.MainActivity">
 
 
 
@@ -38,13 +38,15 @@
 
     <android.support.design.widget.FloatingActionButton
         app:fabSize="auto"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_add_white_24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/floatingActionButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         app:theme="@style/Widget.Design.FloatingActionButton"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
         android:layout_below="@id/rv_list"/>
 
 </RelativeLayout>

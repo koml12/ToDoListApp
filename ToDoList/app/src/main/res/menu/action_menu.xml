@@ -9,7 +9,7 @@
     <item
         android:id="@+id/clear_tasks"
         android:title="@string/clear_tasks"
-        app:showAsAction="never"></item>
+        app:showAsAction="never"/>
 
 
 </menu>

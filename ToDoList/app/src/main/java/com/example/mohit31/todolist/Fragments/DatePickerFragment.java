@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Fragments;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -34,7 +34,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     }
 
 
-    DatePickerFragment(TextView textView, Context context) {
+    public DatePickerFragment(TextView textView, Context context) {
         mTextView = textView;
         mContext = context;
     }

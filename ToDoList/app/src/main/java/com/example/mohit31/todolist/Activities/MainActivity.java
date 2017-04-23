@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Activities;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,6 +14,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import com.example.mohit31.todolist.*;
+import com.example.mohit31.todolist.Adapters.ListAdapter;
+import com.example.mohit31.todolist.Database.TodoListContract;
+import com.example.mohit31.todolist.Database.TodoListDbHelper;
 
 public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;

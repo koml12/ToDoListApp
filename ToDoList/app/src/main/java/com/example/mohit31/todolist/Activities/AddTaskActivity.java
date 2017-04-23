@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Activities;
 
 import android.app.DialogFragment;
 import android.content.ContentValues;
@@ -19,6 +19,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import com.example.mohit31.todolist.*;
+import com.example.mohit31.todolist.Database.TodoListContract;
+import com.example.mohit31.todolist.Database.TodoListDbHelper;
+import com.example.mohit31.todolist.Fragments.DatePickerFragment;
+import com.example.mohit31.todolist.Fragments.TimePickerFragment;
 import com.example.mohit31.todolist.Utils.DateTimeUtils;
 
 public class AddTaskActivity extends AppCompatActivity {

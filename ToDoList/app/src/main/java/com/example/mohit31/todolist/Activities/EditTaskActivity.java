@@ -1,4 +1,4 @@
-package com.example.mohit31.todolist;
+package com.example.mohit31.todolist.Activities;
 
 import android.app.DialogFragment;
 import android.content.ContentValues;
@@ -11,6 +11,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.example.mohit31.todolist.*;
+import com.example.mohit31.todolist.Database.TodoListContract;
+import com.example.mohit31.todolist.Database.TodoListDbHelper;
+import com.example.mohit31.todolist.Fragments.DatePickerFragment;
+import com.example.mohit31.todolist.Fragments.TimePickerFragment;
 
 public class EditTaskActivity extends AppCompatActivity {
     private int priority = 0;
@@ -34,12 +39,12 @@ public class EditTaskActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         String taskName = bundle.getString("TASK_NAME_EXTRA");
-        String taskPriorityText = bundle.getString("TASK_PRIORITY_EXTRA");
+        priority = bundle.getInt("TASK_PRIORITY_EXTRA");
         final int id = bundle.getInt("TASK_ID_EXTRA");
         String dueDateString = bundle.getString("TASK_DUE_DATE_EXTRA");
         String dueTimeString = bundle.getString("TASK_DUE_TIME_EXTRA");
 
-        priority = ListAdapter.convertPriorityStringToInt(taskPriorityText, this);
+
 
         mTaskEditText.setText(taskName);
         mEditDueDateTextView.setText(dueDateString);
@@ -81,7 +86,7 @@ public class EditTaskActivity extends AppCompatActivity {
                         break;
                     case 3:
                         priority = 3;
-                        Log.d("DATA", "priority = 3");
+                         Log.d("DATA", "priority = 3");
                         break;
                 }
             }

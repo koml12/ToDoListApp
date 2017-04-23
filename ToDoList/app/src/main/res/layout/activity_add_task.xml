@@ -8,31 +8,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mohit31.todolist.AddTaskActivity">
+    tools:context="com.example.mohit31.todolist.Activities.AddTaskActivity">
 
     <EditText
         android:id="@+id/add_activity_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/text_here" />
+        android:hint="@string/text_here"
+        android:textSize="24sp"
+        android:paddingBottom="16dp"/>
 
     <Spinner
         android:id="@+id/activity_priority_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/add_activity_text" />
+        android:layout_below="@id/add_activity_text"
+        android:padding="8dp"/>
 
     <TextView
         android:id="@+id/edit_task_date_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/activity_priority_spinner"/>
+        android:layout_toRightOf="@id/activity_priority_spinner"
+        android:layout_below="@id/add_activity_text"
+        android:textSize="16sp"
+        android:padding="8dp"/>
 
     <TextView
         android:id="@+id/add_task_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_task_date_display"/>
+        android:layout_toRightOf="@id/edit_task_date_display"
+        android:layout_below="@id/add_activity_text"
+        android:textSize="16sp"
+        android:padding="8dp"/>
 
     <Button
         android:id="@+id/add_activity_button"
